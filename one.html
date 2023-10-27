@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+</head>
+<body>
+
+    <form action="">
+        <label for="text1">Text1</label>
+        <input type="text" id="text1">
+        <label for="text2">Text2</label>
+        <input type="text" id="text2">
+        <label for="text3">Text3</label>
+        <input type="text" id="text3">
+
+        <button type="button" onclick="one()">submit</button>
+    </form>
+
+    <table border="2px">
+        <tr>
+            <th>Name</th>
+            <th>Mail</th>
+            <th>Age</th>
+        </tr>
+
+        <tbody id="table">
+
+        </tbody>
+        
+    </table>
+
+
+    <script>
+
+
+function one(){
+    let a=document.getElementById('text1').value;
+    let b=document.getElementById('text2').value;
+    let c=document.getElementById('text3').value;
+
+    let obj={
+        name:a,
+        mail:b,
+        age:c
+    };
+   
+
+    let td=document.createElement('tr');
+    td.innerHTML=`  <td>${obj.name}</td>
+                <td>${obj.mail}</td>
+                <td>${obj.age}</td>`;
+
+    document.getElementById('table').appendChild(td);
+
+    
+}
+
+    </script>
+    
+</body>
+</html>
